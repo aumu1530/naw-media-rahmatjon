@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav{
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: rgb(255, 208, 0);
+    width: 100%;
+    height: 80px;
+}
+.container{
+    width: 95%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+nav label{
+    color: #fff;
+    font-size: 36px;
+    line-height: 80px;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: .5s;
+}
+a:hover{
+    background-color: rgb(91, 170, 140);
+}
+.checkbtn{
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+header{
+    background: url(https://media.npr.org/assets/img/2011/04/09/hamster-c4ef2dc4f4fab69f7474eea73debad2042a8ae62.jpg?s=800&c=85&f=jpeg)
+    no-repeat center center/cover;
+    width: 100%;
+    height: 80vh;
+}
+@media (max-width: 900px) {
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 196, 0);
+        top: 80px;
+        text-align: center;
+        transition: all .5s;
+        right: -100%;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #check:checked ~ ul{
+        right: 0;
+    }
+}
